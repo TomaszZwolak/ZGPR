@@ -1,0 +1,202 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.about,
+.footer {
+  padding: 50px 20px;
+}
+
+header {
+  height: 150px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: white;
+  box-shadow: 0px 0px 45px rgba(127, 137, 141, 0.7);
+  text-align: center;
+}
+
+header nav {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 25px 10px;
+}
+
+header nav img {
+  height: 100%;
+  width: 200px;
+}
+
+header nav ul {
+  flex: 1;
+  justify-content: flex-end;
+  display: none;
+}
+
+@media (min-width: 880px) {
+  header nav ul {
+    display: flex;
+  }
+}
+
+header nav ul a {
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0 15px;
+  margin-left: 15px;
+}
+
+header nav ul a:hover {
+  color: yellow;
+  transition: 0.75s;
+}
+
+.about img {
+  width: 500px;
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  .about img {
+    width: 100%;
+    height: 80%;
+  }
+}
+
+.about h2 {
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.7;
+  justify-content: center;
+  text-align: center;
+}
+
+.about .flex-row {
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (min-width: 900px) {
+  .about .flex-row {
+    flex-direction: row;
+  }
+}
+
+.about .right {
+  flex: 1;
+}
+
+.about .left {
+  flex: 1;
+}
+
+.garden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  animation: animate1 16s ease-in-out infinite;
+  background-size: cover;
+}
+
+.garden-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animate1 {
+  33% {
+    background-image: url(./src/bg-garden1.jpg);
+  }
+  66% {
+    background-image: url(./src/bg-garden2.jpg);
+  }
+  100% {
+    background-image: url(./src/bg-garden3.jpg);
+  }
+}
+
+footer {
+  color: black;
+  background-color: whitesmoke;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h2 {
+  margin-bottom: 15px;
+}
+
+footer ul {
+  margin: 0 32px 0 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer li {
+  padding: 0 15px;
+  margin-bottom: 16px;
+}
+
+footer a {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+footer i {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+}
